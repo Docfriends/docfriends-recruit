@@ -23,37 +23,41 @@
 				<span class="like">♥ {{ newList[0].likeCnt }}</span>
 			</div>
 		</div>
-		<div class="detail_wrap container">
-			<dl class="content">
-				<dt>학력 및 자격면허</dt>
-				<dd
-					v-html="$options.filters.splitItems(detailInformation.ability)"
-				></dd>
-
-				<dt>경력</dt>
-				<dd v-html="$options.filters.splitItems(detailInformation.career)"></dd>
-
-				<dt>진료과</dt>
-				<dd>{{ detailInformation.subject }}</dd>
-
-				<dt>알림키워드</dt>
-				<div class="alarm">
+		<div class="custom_container">
+			<div class="detail_wrap ">
+				<dl class="content">
+					<dt>학력 및 자격면허</dt>
 					<dd
-						v-for="(alarm, index) in detailInformation.alarmKeywordList"
-						:key="index"
-					>
-						#{{ alarm }}
-					</dd>
+						v-html="$options.filters.splitItems(detailInformation.ability)"
+					></dd>
+
+					<dt>경력</dt>
+					<dd
+						v-html="$options.filters.splitItems(detailInformation.career)"
+					></dd>
+
+					<dt>진료과</dt>
+					<dd>{{ detailInformation.subject }}</dd>
+
+					<dt>알림키워드</dt>
+					<div class="alarm">
+						<dd
+							v-for="(alarm, index) in detailInformation.alarmKeywordList"
+							:key="index"
+						>
+							#{{ alarm }}
+						</dd>
+					</div>
+					<dt>소속 정보</dt>
+					<dd>{{ detailInformation.companyName }}</dd>
+					<dd>{{ detailInformation.companyAddr }}</dd>
+					<dd>{{ detailInformation.companyJibun }}</dd>
+				</dl>
+				<div class="goHome">
+					<nuxt-link :to="'/'">
+						<button>{{ detailInformation.companyName }} 바로가기 ></button>
+					</nuxt-link>
 				</div>
-				<dt>소속 정보</dt>
-				<dd>{{ detailInformation.companyName }}</dd>
-				<dd>{{ detailInformation.companyAddr }}</dd>
-				<dd>{{ detailInformation.companyJibun }}</dd>
-			</dl>
-			<div class="goHome">
-				<nuxt-link :to="'/'">
-					<button>{{ detailInformation.companyName }} 바로가기 ></button>
-				</nuxt-link>
 			</div>
 		</div>
 	</div>
@@ -204,52 +208,53 @@ export default {
 		}
 	}
 
-	.detail_wrap {
-		&.container {
-			max-width: 1200px;
-			width: 100%;
-			margin: 0 auto;
-		}
-
+	.custom_container {
+		max-width: 1200px;
 		width: 100%;
-		border: 1px solid #12bb00;
-		margin-bottom: 40px;
-		border-radius: 5px;
-		padding: 40px;
+		margin: 0 auto;
+		padding: 0 20px;
 
-		.content {
-			dt {
-				font-size: 25px;
-				font-weight: bold;
-				color: #12bb00;
-				margin-bottom: 5px;
-			}
+		.detail_wrap {
+			width: 100%;
+			border: 1px solid #12bb00;
+			margin-bottom: 40px;
+			border-radius: 15px;
+			padding: 40px;
 
-			dd {
-				margin-bottom: 10px;
-			}
-
-			.alarm {
-				display: flex;
-				justify-content: flex-start;
+			.content {
+				dt {
+					font-size: 25px;
+					font-weight: bold;
+					color: #12bb00;
+					margin-bottom: 5px;
+				}
 
 				dd {
-					margin-right: 5px;
+					margin-bottom: 10px;
+				}
+
+				.alarm {
+					display: flex;
+					justify-content: flex-start;
+
+					dd {
+						margin-right: 5px;
+					}
 				}
 			}
-		}
 
-		.goHome {
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			.goHome {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 
-			button {
-				height: 40px;
-				color: #fff;
-				background: #12bb00;
-				width: 200px;
-				border-radius: 10px;
+				button {
+					height: 40px;
+					color: #fff;
+					background: #12bb00;
+					width: 200px;
+					border-radius: 10px;
+				}
 			}
 		}
 	}

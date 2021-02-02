@@ -2,7 +2,7 @@
 	<div class="main">
 		<slider :imagePathList="hospital.imagePathList"></slider>
 		<h1 class="hospital_name">{{ hospital.name }}</h1>
-		<div class="container">
+		<div class="custom_container">
 			<div class="tabArea">
 				<button
 					type="button"
@@ -156,10 +156,11 @@ export default {
 		margin-top: 20px;
 	}
 
-	.container {
+	.custom_container {
 		max-width: 800px;
 		width: 100%;
 		margin: 0 auto;
+    padding: 0 20px;
 
 		.tabArea {
 			display: flex;

@@ -87,9 +87,22 @@ export default {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
+	gap: 10px;
 
 	.expert_item {
-		margin-bottom: 10px;
+		margin-bottom: 5px;
+		width: 31.5%;
+		@media only screen and (max-width: 768px) {
+			width: 32%;
+		}
+		@media only screen and (max-width: 420px) {
+			margin-bottom: 10px;
+			width: 48.5%;
+		}
+		@media only screen and (max-width: 360px) {
+			margin-bottom: 10px;
+			width: 48%;
+		}
 	}
 }
 </style>

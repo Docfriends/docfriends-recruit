@@ -46,15 +46,14 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-	width: 245px;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	border: 1px solid #12bb00;
-	border-radius: 5px;
+	border-radius: 15px;
 	padding: 10px;
-	margin: 5px;
 	height: 100%;
 
 	.avatar_wrap {

@@ -90,7 +90,7 @@ export default {
 
 	.expert_item {
 		margin-bottom: 5px;
-		width: 32.5%;
+		width: 32.3%;
 		@media only screen and (max-width: 768px) {
 			width: 32%;
 		}

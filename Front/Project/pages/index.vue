@@ -153,14 +153,14 @@ export default {
 		font-size: 25px;
 		text-align: center;
 		font-weight: bold;
-		margin-top: 20px;
+		margin: 20px 0;
 	}
 
 	.custom_container {
 		max-width: 800px;
 		width: 100%;
 		margin: 0 auto;
-    padding: 0 20px;
+		padding: 0 20px;
 
 		.tabArea {
 			display: flex;
@@ -199,7 +199,7 @@ export default {
 				border: 1px solid #12bb00;
 				padding: 20px;
 				border-radius: 15px;
-
+				margin-bottom: 50px;
 				dt {
 					width: 100%;
 					margin-bottom: 10px;

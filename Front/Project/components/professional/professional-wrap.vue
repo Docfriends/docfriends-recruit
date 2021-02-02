@@ -83,11 +83,11 @@ export default {
 
 <style lang="scss" scoped>
 .professional_wrap {
-	height: 500px;
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	gap: 10px;
+	margin-bottom: 50px;
 
 	.expert_item {
 		margin-bottom: 5px;

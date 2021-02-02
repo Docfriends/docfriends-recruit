@@ -196,7 +196,7 @@ export default {
 			align-items: center;
 
 			.expert_name {
-				font-size: 20px;
+				font-size: 18px;
 				margin-top: 10px;
 			}
 

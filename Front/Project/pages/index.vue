@@ -147,7 +147,7 @@ export default {
 .main {
 	.pro {
 		margin-top: 50px;
-		margin-bottom: 30px;
+		padding-bottom: 50px;
 	}
 	.hospital_name {
 		font-size: 25px;

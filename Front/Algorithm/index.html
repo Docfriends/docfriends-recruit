@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const q = "ab23c4d56e78f9g12h34i5j12k45l67n89m99o1k123p456q567r768s890t67u456v345w234x23y239z";
+    function solution(value) {
+        let max = 0
+        let min = 0
+        const array = value.replaceAll(/[^0-9]/g, " ").trim().split(' ').map(v => Number(v))
+        max = array.indexOf(Math.max(...array))
+        min = array.indexOf(Math.min(...array))
+        return max + min
+    }
+</script>
+</body>
+</html>
